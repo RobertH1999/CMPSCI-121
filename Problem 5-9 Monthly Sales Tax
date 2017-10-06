@@ -1,0 +1,26 @@
+"""
+Write a program that asks the user to enter the total sales for the month. From this figure, the application should calculate 
+and display the following:
+1. The amount of county sales tax
+2. Amount of state sales tax
+3. The total sales tax (county plus state)
+"""
+county_tax_rate =  0.025 
+state_tax_rate = 0.05
+
+def main():
+	total_sales = int(input("Enter the total sales for the month. ")
+	while total_sales < 0:
+		total_sales = int(input("ERROR: The total sales for the month must be a nonnegative value."))
+	print(taxes(total_sales)
+	
+def taxes(total_sales):
+	county_tax = total_sales * county_tax_rate
+	state_tax = total sales * state_tax_rate
+	total = county_tax + state_tax
+	
+def display_taxes():
+	print(The amount of county sales taxes is
+	
+main()
+	
