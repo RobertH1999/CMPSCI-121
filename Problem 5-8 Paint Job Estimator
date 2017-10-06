@@ -19,5 +19,5 @@ def estimate(wall_space, gallon_price):
 	laborcharge = 35 * labor_hours
 	totalcost = laborcharge + totalpaintcost
 	print ("The total price for this paint job is $", final_total, ".")
-		
+main()		
 			
