@@ -1,0 +1,3 @@
+"""
+Write a program that asks the user to enter the square feet of wall space to be painted and the price of the paint per gallon. The program should display the following data:
+1. The number of gallons
