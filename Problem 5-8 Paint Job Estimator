@@ -15,10 +15,15 @@ def main():
     
 def estimate(wall_space, gallon_price):
     num_gallon = wall_space / 112
-    labor_hours = gallons_paint * 8 
+    labor_hours = num_gallon * 8 
     totalpaintcost = gallon_price * num_gallon 
     laborcharge = 35 * labor_hours
     totalcost = laborcharge + totalpaintcost
-    print ("The total price for this paint job is $", final_total, ".")
 
-main()	
+    print("The number of gallons of paint required: ", num_gallon, ".")
+    print("The hours of labor required is: ", labor_hours, ".")
+    print("The cost of the paint is: ", totalpaintcost, ".")
+    print("The labor charges: ",laborcharge, ".") 
+    print ("The total price for this paint job is $", totalcost, ".")
+
+main()
