@@ -27,11 +27,11 @@ while calc_function < 1 calc_function > 8:
 
 if calc_function == 1:
 elif calc_function == 2:
-elif calc_function == 2:
-elif calc_function == 2:
-elif calc_function == 2:
-elif calc_function == 2:
-elif calc_function == 2:
+elif calc_function == 3:
+elif calc_function == 4:
+elif calc_function == 5:
+elif calc_function == 6:
+elif calc_function == 7:
 else: 
 
 Addition(x1, x2):
