@@ -74,11 +74,19 @@ Division_No_Remainder(x1, x2):
 	print(total)
 	
 GPA_Calculator(grade1, grade2, grade3, grade4, grade5):
-	grade1 = 
-	grade2 = 
-	grade3 = 
-	grade4 =
-	grade5 = 
+	try:
+		grade1 = 
+	exception:
+	try:
+		grade2 = 
+	try:
+		grade3 = 
+	try:
+		grade4 =
+	exception:
+	try:
+		grade5 =
+	exception:
 	
 Grade_Converter():
 Statistics_Calculator():
