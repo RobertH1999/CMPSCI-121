@@ -1,3 +1,4 @@
+
 """This is a multi purpose calculator that can add, subtract, multiply, divide and all of the other basic functions. This calculator can also calculate your GPA and your grades. 
 
 print("""Menu:
