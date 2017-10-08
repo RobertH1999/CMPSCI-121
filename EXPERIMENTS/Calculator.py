@@ -1,5 +1,15 @@
-
 """This is a multi purpose calculator that can add, subtract, multiply, divide and all of the other basic functions. This calculator can also calculate your GPA and your grades. 
+
+In the works:
+1. GPA_Calculator():
+2. Grade_Converter():
+3. Statistics_Calculator():
+4. Graphing function
+5. A visual calculator
+6. button()
+
+Multiple input calculations. 
+"""
 
 print("""Menu:
 	1. Addition
@@ -24,30 +34,36 @@ elif calc_function == 2:
 elif calc_function == 2:
 else: 
 
-Addition():
+Addition(x1, x2):
 	x1 = float(input("Please enter a value for x1 " ))
 	x2 = float(input("Please enter a value for x2. "))
 	total = x1 + x2
 	print(total)
 	
-Subtraction():
+Subtraction(x1, x2):
 	x1 = float(input("Please enter a value for x1 " ))
 	x2 = float(input("Please enter a value for x2. "))
 	total = x1 - x2
 	print(total)
 	
-Multiplication():
+Multiplication(x1, x2):
 	x1 = int(input("Please enter a value for x1 " ))
 	x2 = int(input("Please enter a value for x2. "))
 	total = x1 * x2
 	print(total)
 	
-Division_No_Remainder():
+Division_No_Remainder(x1, x2):
 	x1 = int(input("Please enter a value for x1 " ))
 	x2 = int(input("Please enter a value for x2. "))
 	total = x1//x2
 	print(total)
 	
-GPA_Calculator():
+GPA_Calculator(grade1, grade2, grade3, grade4, grade5):
+	grade1 = 
+	grade2 = 
+	grade3 = 
+	grade4 =
+	grade5 = 
+	
 Grade_Converter():
 Statistics_Calculator():
