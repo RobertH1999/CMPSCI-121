@@ -1,1 +1,35 @@
+# Exception Handling
 
+""" Assume  a file containing a series of integers is named numbers.txt
+and exists o the computer's disk. Write a program that reads all of the numbers
+stored in the file.
+
+C:\\College\\CMPSC 121\\numbers.txt"""
+
+"""while line != '':
+    amount = float(line)
+    total += amount
+    count += 1
+    line = myfile.readline()
+   """
+
+# line = myfile.readline()
+total = 0
+count = 0
+
+try:
+    myfile = open('C:\\College\\CMPSC 121\\numbers.txt', 'r')
+   
+    for line in myfile:
+        amount = float(line)
+        total += amount
+        count += 1
+
+    avg = total / count
+    print(total, count, avg)
+    myfile.close()
+
+except IOError:
+    print('ERROR: An error occured trying to read the file. ')
+except ValueError:
+    print('ERROR: Non-numeric data found in the file. ')
