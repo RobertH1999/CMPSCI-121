@@ -22,33 +22,35 @@ print("""Menu:
 	8. Statistics Calculator""")
 	
 calc_function = int(input("Please enter what calculator function you would like to have. "))
-while calc_function < 1 calc_function > 8:
-	calc_function = int(input("ERROR: The integer must be between 1 and 8, inclusively. "))
-
+while calc_function < 1 or calc_function > 8:
+	try:
+		calc_function = int(input("ERROR: The integer must be between 1 and 8, inclusively. "))
+	except ValueError: 
+		print("The number you entered is not an integer.")
 if calc_function == 1:
 	try:
-	exception:	
+	except:	
 elif calc_function == 2:
 	try:
-	exception:	
+	except:	
 elif calc_function == 3:
 	try:
-	exception:	
+	except:	
 elif calc_function == 4:
 	try:
-	exception:	
+	except:	
 elif calc_function == 5:
 	try:
 	exception:	
 elif calc_function == 6:
 	try:
-	exception:	
+	except:	
 elif calc_function == 7:
 	try:
-	exception:	
+	except:	
 else: 
 	try:
-	exception:	
+	except:	
 Addition(x1, x2):
 	x1 = float(input("Please enter a value for x1 " ))
 	x2 = float(input("Please enter a value for x2. "))
