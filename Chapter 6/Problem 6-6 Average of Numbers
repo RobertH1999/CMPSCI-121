@@ -1,1 +1,20 @@
+ Average of Numbers
 
+""" Assume  a file containing a series of integers is named numbers.txt
+and exists o the computer's disk. Write a program that reads all of the numbers
+stored in the file."""
+
+myfile = open('C:\\Penn State\\CMPSC 121\\numbers.txt', 'r')
+
+# line = myfile.readline()
+
+total = 0
+count = 0
+
+for line in myfile:
+    amount = float(line)
+    total += amount
+    count += 1
+
+print(total, count, total/count)
+myfile.close()
