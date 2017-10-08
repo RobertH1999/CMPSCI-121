@@ -26,14 +26,29 @@ while calc_function < 1 calc_function > 8:
 	calc_function = int(input("ERROR: The integer must be between 1 and 8, inclusively. "))
 
 if calc_function == 1:
+	try:
+	exception:	
 elif calc_function == 2:
+	try:
+	exception:	
 elif calc_function == 3:
+	try:
+	exception:	
 elif calc_function == 4:
+	try:
+	exception:	
 elif calc_function == 5:
+	try:
+	exception:	
 elif calc_function == 6:
+	try:
+	exception:	
 elif calc_function == 7:
+	try:
+	exception:	
 else: 
-
+	try:
+	exception:	
 Addition(x1, x2):
 	x1 = float(input("Please enter a value for x1 " ))
 	x2 = float(input("Please enter a value for x2. "))
