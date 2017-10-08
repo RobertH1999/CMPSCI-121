@@ -15,7 +15,14 @@ while calc_function < 1 calc_function > 8:
 	calc_function = int(input("ERROR: The integer must be between 1 and 8, inclusively. "))
 
 if calc_function == 1:
-	
+elif calc_function == 2:
+elif calc_function == 2:
+elif calc_function == 2:
+elif calc_function == 2:
+elif calc_function == 2:
+elif calc_function == 2:
+else: 
+
 Addition():
 	x1 = float(input("Please enter a value for x1 " ))
 	x2 = float(input("Please enter a value for x2. "))
