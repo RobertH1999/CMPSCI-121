@@ -75,10 +75,10 @@ Division_No_Remainder(x1, x2):
 	
 GPA_Calculator(grade1, grade2, grade3, grade4, grade5):
 	try:
-		grade1 = 
+		grade1 = float(input("Please enter your grade for class 1. "))
 	exception:
 	try:
-		grade2 = 
+		grade2 = float(input("Please enter your grade for class 2. "))
 	try:
 		grade3 = 
 	try:
