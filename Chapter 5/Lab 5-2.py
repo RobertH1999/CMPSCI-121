@@ -7,13 +7,12 @@ find the minimum.) """
 
 def main():
   x1 = float(input("Please enter a value for x1. ")) 
-  x2 = float(input("Please enter a value for x1. ")) 
-  x3 = float(input("Please enter a value for x1. ")) 
-  x4 = float(input("Please enter a value for x1. ")) 
-  x5 = float(input("Please enter a value for x1. ")) 
-  x6 = float(input("Please enter a value for x1. ")) 
-  x7 = float(input("Please enter a value for x1. ")) 
-  x8 = float(input("Please enter a value for x1. ")) 
+  x2 = float(input("Please enter a value for x2. ")) 
+  x3 = float(input("Please enter a value for x3. ")) 
+  x4 = float(input("Please enter a value for x4. ")) 
+  x5 = float(input("Please enter a value for x5. ")) 
+  x6 = float(input("Please enter a value for x6. ")) 
+  x7 = float(input("Please enter a value for x7. ")) 
 
 def sort_numbers():
 
