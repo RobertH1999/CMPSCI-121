@@ -17,7 +17,7 @@ def main():
 	while money < 0:
 		money = float(input("ERROR: The amount of change needs to be positive."))
 	
-	exchange(	
+	exchange(num_quarters, num_dimes, num_nickels, num_pennies)	
 def exchange(money):
 	num_quarters = money // quarters
 	change1 = money % quarters
