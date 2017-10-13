@@ -7,4 +7,6 @@ function should employ a print statement to output the results.
 """
 
 for i in range(50):
+	number = int(input("Please enter a whole number. "))
+	while number = int(input("ERROR: Please enter 
 	
