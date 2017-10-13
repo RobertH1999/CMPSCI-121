@@ -26,14 +26,15 @@ def exchange(money):
     num_pennies = change3// pennies
 
     return num_quarters, num_dimes, num_nickels, num_pennies
-    print("The change can be converted to", num_quarters, "quarters", num_dimes, "dimes", num_nickels, "nickels", num_pennies, "pennies. ")
+   
     
 def main():
-    money = float(input("Please enter the amount of change needed. "))
-    while money < 0:
-        money = float(input("ERROR: The amount of change needs to be positive."))
-    exchange(money_incoins)	
-        
+    money_incoins = float(input("Please enter the amount of change needed. "))
+    while money_incoins <= 0:
+        money_incoins = float(input("ERROR: The amount of change needs to be nonnegative."))
+    numq, numd, numn, nump = exchange(money_incoins)	
+    print("The change can be converted to", numq, "quarters", numd, "dimes", numn, "nickels", nump, "pennies. ")    
+	
 main()
 
 	
