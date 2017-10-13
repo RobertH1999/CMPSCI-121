@@ -1,3 +1,3 @@
 # CMPSCI-121
-This is going to be where I store my CMPSC 121 homework 
+Currently working on Lab5 (Work in progress, 33% complete)
 
