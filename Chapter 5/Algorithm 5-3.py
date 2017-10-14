@@ -6,22 +6,17 @@ how many even and odd numbers were entered (
 function should employ a print statement to output the results.
 """
 def main():
-    for i in range(50):
-        number = int(input("Please enter a whole number. "))
-	while number < 0:
-            number = int(input("ERROR: Please enter a whole number. "))
-
-        even, odd = even_or_odd(number)
-    print(even_or_odd(number))
-
-def even_or_odd(num):
     even_number = 0
     odd_number = 0
-
-    if number % 2 == 0:
-        even_number +=1
-    else:
-        odd_number +=1
-    return even_number, odd_number
-
+    for i in range(5):
+        number = int(input("Please enter a whole number. "))
+        while number < 0:
+            number = int(input("ERROR: Please enter a whole number. "))
+        if number % 2 == 0:
+            even_number +=1
+        else:
+            odd_number +=1
+    print("Number of even values: ",even_number,"Number of odd values: ", odd_number)
 main()
+
+
