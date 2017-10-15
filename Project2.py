@@ -65,11 +65,10 @@ while currentBalance > 0:
     youPay = float(input("How much would you like to pay this month? "))
     print("\n")
     currentBalance -= youPay
-    print("The balance from the previous month was ${:,.2f}.".format(currentBalance))
 
 print("\n")
 print("Your account has been paid off!")
 print("You paid a total of ${:,.2f}.".format(totalInterest), "in interest.")
 if rounding(currentBalance) < 0:
     print("You currently have a credit of ${:,.2f}.".format(currentBalance))
-print("Press any key to continue.  .  .  ") 
+print("Press any key to continue. . .  ") 
