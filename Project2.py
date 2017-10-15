@@ -3,6 +3,11 @@
 
 """
 """
+
+def rounding(value):
+    value = int(value * 100 + 0.5)
+    return value * 0.01
+
 totalInterest = 0
 currentBalance = 0
 yearlyInterestRate = float(input("What is the yearly interest rate for the credit card entered as a percent? "))
@@ -13,8 +18,8 @@ print("\n")
 print("The balance from the previous month was ${:,.2f}.".format(currentBalance))
 
 monthlyInterestRate = yearlyInterestRate / 12
-monthlyInterest = monthlyInterestRate * 0.01 * currentBalance
-totalinterest += monthlyInterest
+monthlyInterest = rounding(monthlyInterestRate * 0.01 * currentBalance)
+totalInterest += monthlyInterest
 print("There was ${:,.2f}.".format(monthlyInterest), "applied to your account last month.")
 
 totalCharges = float(input("What were the total charges for this month? "))
@@ -24,7 +29,7 @@ print("Your current balance is ${:,.2f}.".format(currentBalance))
 
 if currentBalance >= 10:
     if 0.075 * currentBalance > 10:
-        minimumPayment = 0.075 * currentBalance
+        minimumPayment = rounding(0.075 * currentBalance)
     else:
         minimumPayment = 10
 else:
@@ -39,7 +44,7 @@ print("The balance from the previous month was ${:,.2f}.".format(currentBalance)
 
 while currentBalance > 0:
     monthlyInterestRate = yearlyInterestRate / 12
-    monthlyInterest = monthlyInterestRate * 0.01 * currentBalance
+    monthlyInterest = rounding(monthlyInterestRate * 0.01 * currentBalance)
     totalInterest += monthlyInterest
     print("There was ${:,.2f}.".format(monthlyInterest), "applied to your account last month.")
 
@@ -50,7 +55,7 @@ while currentBalance > 0:
 
     if currentBalance >= 10:
         if 0.075 * currentBalance > 10:
-            minimumPayment = 0.075 * currentBalance
+            minimumPayment = rounding(0.075 * currentBalance)
         else:
             minimumPayment = 10
     else:
@@ -62,8 +67,9 @@ while currentBalance > 0:
     currentBalance -= youPay
     print("The balance from the previous month was ${:,.2f}.".format(currentBalance))
 
+print("\n")
 print("Your account has been paid off!")
-print("You paid a total of ${:,.2f}.".format(totalInterest))
-if currentBalance < 0:
+print("You paid a total of ${:,.2f}.".format(totalInterest), "in interest.")
+if rounding(currentBalance) < 0:
     print("You currently have a credit of ${:,.2f}.".format(currentBalance))
 print("Press any key to continue.  .  .  ") 
