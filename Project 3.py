@@ -1,5 +1,6 @@
 """
-Purpose: Estimate the volume of the cheese with holes in it. 
+Purpose: Estimate the volume of the rectangular chunk of Swiss cheese. Assume the holes
+are sphereical or cylinders. 
 Input needed: The dimensions of the cheese, the radius of the holes,
               radius and height of cylinder.  
               the number of number of holes.  
@@ -30,7 +31,18 @@ In volumeRectangle function:
     1. Receive the parameters nsphere and rsphere.
     2. Use the equation sphereVolume = nsphere * 4/3 * pi * rsphere**3
     3. Return the value back to RectangleVolume
-
+In volumeCheese function:
+    1. Receive the parameters hRectangle,wRectangle,lRectangle, numSphere, radSphere, numcylinder, radiuscylinder, heightcylinder.
+    2. Call the functions from above.
+    3. cheesevolume = rVolume - cVolume - sVolume, where rVolume is the volume of the rectangle, cVolume is the volume of cylinders, and sVolume is the volume of sphere.
+In CheckValue function:
+    1. Receive the value
+    2. If the value is less than 0, display error message and ask user to reenter a valid input.
+    3. Return to value. 
+In BubbleCheck function:
+    1. Receive the nbubbles value and enter what you are comparing(number of spheres / cylinders) and
+    2. If the value is less than 0, display error message and ask user to reenter a valid input.
+    3. Return to nbubbles
 """
 pi = 3.14159
 def main():
@@ -61,17 +73,25 @@ def main():
     cheeseVolume = volumeCheese(height,width,length, numsphere, radiusSphere, numCylinder, radiusCylinder, heightCylinder)
     print("The total volume of the cheese present is ", cheeseVolume, "cubic centimeters. ")
 
-# Receive the parameters and find the volume of the sphere. Return the value to sphereVolume. 
+# Receive the parameters and find the volume of the sphere.
+# Volume of a sphere is number of spheres * 4/3 * pi * radius of sphere ^ 3
+# Return the value to sphereVolume.
+
 def volumeSphere(nsphere, rsphere):
     sphereVolume = nsphere * 4/3 * pi * rsphere**3
     return sphereVolume
 
-# Receive the parameters and find the volume of the cylinder. Return the value to cylinderVolume. 
+# Receive the parameters and find the volume of the cylinder.
+# Volume of a cylinder is number of cylinders * pi * radius of cylinder ^ 2 * height of cylinder
+# Return the value to cylinderVolume.
+
 def volumeCylinder(nCylinder, rCylinder, hCylinder):
     cylinderVolume = nCylinder * pi * rCylinder ** 2 * hCylinder
     return cylinderVolume
 
-# Receive the parameters and find the volume of the rectangle. Return the value to sphereRectangle. 
+# Receive the parameters and find the volume of the rectangle.
+# Volume of rectangle is height * width * length
+# Return the value to rectangleVolume. 
 def volumeRectangle(h,w,l):
     rectangleVolume = h * w * l
     return rectangleVolume
@@ -99,3 +119,4 @@ def BubbleCheck(nbubbles, thing):
         nbubbles = float(input("Enter a value greater than or equal to zero. " + thing))
     return nbubbles
 main()
+
