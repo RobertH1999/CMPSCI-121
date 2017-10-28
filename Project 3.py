@@ -96,7 +96,9 @@ def volumeRectangle(h,w,l):
     rectangleVolume = h * w * l
     return rectangleVolume
 
-# Receive the parameters and find the volume of the cheese. Return the value to volume. 
+# Receive the parameters and find the volume of the cheese.
+# Volume of cheese = rectangle volume - cylinder volume - sphere volume
+# Return the value to volume. 
 def volumeCheese(hRectangle,wRectangle,lRectangle, numSphere, radSphere, numcylinder, radiuscylinder, heightcylinder):
     sVolume = volumeSphere(numSphere, radSphere)
     cVolume = volumeCylinder(numcylinder, radiuscylinder, heightcylinder)
