@@ -1,7 +1,4 @@
 """
-Robert Hsu
-CMPSCI 121 - Fall 2017
-
 Purpose: Estimate the volume of the Swiss cheese. The shape of the Swiss cheese is a rectangular hunk with spherical and cylindrical holes. 
 To estimate the volume of Swiss cheese, we need to calculate the rectangular volume and subtract the holes from the rectangular volume. 
 Input needed: 1. Rectangle: height, length, and width
