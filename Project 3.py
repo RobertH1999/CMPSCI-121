@@ -1,7 +1,4 @@
 """
-Robert Hsu
-CMPSCI 121 - Fall 2017
-
 Purpose: Estimate the volume of the Swiss cheese. The shape of the Swiss cheese is a rectangular hunk with spherical and cylindrical holes. 
 To estimate the volume of Swiss cheese, we need to calculate the rectangular volume and subtract the holes from the rectangular volume. 
 Input needed: 1. Height, length, and width of rectangle
@@ -128,14 +125,14 @@ def volumeCheese(hRectangle,wRectangle,lRectangle, numSphere, radSphere, numcyli
 # Check if the inputted value is greater than zero. If not, then display error message and tell user to enter a valid value. 
 def CheckValue(value, what):
     while value < 0:
-        print("The ", what, " must be greater than zero!")
+        print("The", what, "must be greater than zero!")
         value = float(input("Please re-enter the " + what + " of hunk of cheese. "))
     return value
 
 # Check if the inputted value is greater than zero. If not, then display error message and tell user to enter a valid value. 
 def BubbleCheck(nbubbles, thing):
     while nbubbles < 0:
-        print("The ", thing, " must be greater than zero!")
+        print("The", thing, "must be greater than zero!")
         nbubbles = float(input("Please re-enter the number of " + thing + ". "))
     return nbubbles
 main()
