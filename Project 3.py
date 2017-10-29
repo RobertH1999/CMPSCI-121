@@ -1,4 +1,7 @@
 """
+Robert Hsu
+CMPSCI 121 - Fall 2017
+
 Purpose: Estimate the volume of the Swiss cheese. The shape of the Swiss cheese is a rectangular hunk with spherical and cylindrical holes. 
 To estimate the volume of Swiss cheese, we need to calculate the rectangular volume and subtract the holes from the rectangular volume. 
 Input needed: 1. Height, length, and width of rectangle
@@ -49,11 +52,18 @@ In BubbleCheck function:
 Execute the main function.
 
 Test Data:
-    Height = 25.8
-    Length = 40.67
-    Width = 35.5
-    
+    height: 25.8
+    length: 40.67
+    width: 35.5
+    numsphere: 10
+    radiusSphere: 1.2
+    numCylinder: 8
+    radiusCylinder: 0.8
+    heightCylinder: 4
+
+    The total volume of cheese present is 37,112.9 cubic centimeters. 
 """
+
 # pi is a global constant. 
 pi = 3.14159
 
@@ -85,7 +95,7 @@ def main():
     heightCylinder = CheckValue(heightCylinder, "height of the cylinder")
     
     cheeseVolume = volumeCheese(height,width,length, numsphere, radiusSphere, numCylinder, radiusCylinder, heightCylinder)
-    print("The total volume of the cheese present is {:,.1f}".format(cheeseVolume), "cubic centimeters. ")
+    print("The total volume of cheese present is {:,.1f}".format(cheeseVolume), "cubic centimeters. ")
 
 # 1. Receive the parameters nsphere and rsphere.
 # 2. Use the equation sphereVolume = nsphere * 4/3 * pi * rsphere**3
