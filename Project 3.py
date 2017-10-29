@@ -1,4 +1,7 @@
 """
+Robert Hsu
+CMPSCI 121 - Fall 2017
+
 Purpose: Estimate the volume of the Swiss cheese. The shape of the Swiss cheese is a rectangular hunk with spherical and cylindrical holes. 
 To estimate the volume of Swiss cheese, we need to calculate the rectangular volume and subtract the holes from the rectangular volume. 
 Input needed: 1. Height, length, and width of rectangle
@@ -9,11 +12,13 @@ Expected output: Volume of the cheese.
 Algorithm:
 Volume of cheese: Volume of rectangle - volume of spheres - volume of cylinder
 Volume of rectangle: length * width * height. 
-Volume of spheres: 4/3 * pi * r^2.
-Volume of cylinder: pi * r^2*h.
+Volume of spheres: 4/3 * pi * r**2.
+Volume of cylinder: pi * r**2 * h.
 
+In addition to the main function, there are 6 additional functions to be created as follows 
 In main function:
-    1. Ask input to input the height, length, number of spheres, number of cylinders, radius of cylinder, and height of cylinder.
+    1. Ask user to input the (1)height, (2)length, and (3) width for the rectangular hunk of Swiss cheese, (4)number of spheres, (5)radius of spheres (6)number of cylinders,
+       (7)radius of cylinder, and (8)height of cylinder.
        Check if each value is greater than zero. If the value is less than zero, then display error message and prompt user to enter a valid input. 
        In a function called volumeSphere, receive the parameters nspheres and rspheres. Calculate the formula using sphereVolume = nsphere *4/3 * pi *rsphere ** 3.
        Afterwards, return the value sphereVolume.
