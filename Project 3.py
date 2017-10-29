@@ -43,6 +43,8 @@ In BubbleCheck function:
     1. Receive the nbubbles value.
     2. If the value is less than 0, display error message and ask user to reenter a valid input.
     3. Return to nbubbles.
+
+Execute the main function.
 """
 # pi is a global constant. 
 pi = 3.14159
