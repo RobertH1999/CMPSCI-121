@@ -1,4 +1,7 @@
 """
+Robert Hsu
+CMPSCI 121 - Fall 2017
+
 Purpose: Estimate the volume of the Swiss cheese. The shape of the Swiss cheese is a rectangular hunk with spherical and cylindrical holes. 
 To estimate the volume of Swiss cheese, we need to calculate the rectangular volume and subtract the holes from the rectangular volume. 
 Input needed: 1. Rectangle: height, length, and width
@@ -8,13 +11,13 @@ Expected output: Volume of the cheese in cubic centimeters.
 Algorithm:
 Volume of cheese: Volume of rectangle - volume of spheres - volume of cylinder
 Volume of rectangle: length * width * height. 
-Volume of spheres: 4/3 * pi * r**2.
-Volume of cylinder: pi * r**2 * h.
+Volume of spheres: 4/3 * pi * rSphere**2.
+Volume of cylinder: pi * rCylinder**2 * hCylinder.
 
 In addition to the main function, there are 6 additional functions to be created as follows 
 In main function:
     1. (a) Ask user to input the (1)height, (2)length, and (3) width for the rectangular hunk of Swiss cheese, (4)number of spheres, (5)radius of spheres (6)number of cylinders,
-       (7)radius of cylinder, and (8)height of cylinder.
+           (7)radius of cylinder, and (8)height of cylinder.
        
        (b) Check if each value is greater than zero. If the value is less than zero, then display error message and prompt user to enter a valid input.
        
@@ -24,35 +27,35 @@ In main function:
     2. Call the cheeseVolume function.
     3. Display the total volume of the cheese in cubic centimeters.
     
-In volumeSphere function:
-    1. Receive the parameters nsphere and rsphere.
+In volumeSphere function which is to calculate the total volume of sphere in the Swiss cheese:
+    1. Receive the parameters nsphere and rsphere, where nsphere is the number of spheres and rsphere is the radius of the sphere
     2. Use the equation sphereVolume = nsphere * 4/3 * pi * rsphere**3.
     3. Return sphereVolume.
 
-In volumeCylinder function:
+In volumeCylinder function which is to calculate the total volume of cylinder in the Swiss cheese:
     1. Receive the parameters nCylinder and rCylinder, and hCylinder.
     2. Use the equation cylinderVolume = nCylinder * pi * hCylinder * rCylinder**2.
     3. Return cylinderVolume.
 
-In volumeRectangle function:
-    1. Receive the parameters h, w, l
+In volumeRectangle function which is to calculate the total volume of rectangle in the Swiss cheese:
+    1. Receive the parameters h(height of rectangle) , w(width of rectangle), l(length of rectangle)
     2. Use the equation rectangleVolume = h * w * l
     3. Return the value back to rectangleVolume.
     
-In volumeCheese function:
+In volumeCheese function which is to calculate the total volume of Swiss cheese:
     1. Receive the parameters hRectangle,wRectangle,lRectangle, numSphere, radSphere, numcylinder, radiuscylinder, heightcylinder.
     2. Call the functions from above.
     3. cheesevolume = rVolume - cVolume - sVolume, where rVolume is the volume of the rectangle, cVolume is the volume of cylinders, and sVolume is the volume of sphere.
     4. return cheesevolume
     
-In CheckDimValue function:
+In CheckDimValue function which is to check value is greater than zero:
     1. Receive the value.
-    2. If the value is less than 0, display error message and ask user to reenter a valid input.
+    2. If the value is less than or equal to 0, display error message and ask user to reenter a valid input.
     3. Return value.
     
-In BubbleCheck function:
+In BubbleCheck function which is to check value is greater than zero:
     1. Receive the nbubbles value.
-    2. If the value is less than 0, display error message and ask user to reenter a valid input.
+    2. If the value is less than or equal to 0, display error message and ask user to reenter a valid input.
     3. Return nbubbles.
 
 Execute the main function.
@@ -103,7 +106,7 @@ def main():
     cheeseVolume = volumeCheese(height,width,length, numsphere, radiusSphere, numCylinder, radiusCylinder, heightCylinder)
     print("The total volume of cheese present is {:.1f} cubic centimeters. ".format(cheeseVolume))
 
-# 1. Receive the parameters nsphere and rsphere.
+# 1. Receive the parameters nsphere and rsphere, where nsphere is the number of spheres and rsphere is the radius of the sphere
 # 2. Use the equation sphereVolume = nsphere * 4/3 * pi * rsphere**3
 # 3. Return sphereVolume
 
@@ -140,18 +143,21 @@ def volumeCheese(hRectangle,wRectangle,lRectangle, numSphere, radSphere, numcyli
     return cheesevolume
 
 # 1. Receive the value.
-# 2. If the value is less than 0, display error message and ask user to reenter a valid input.
+# 2. If the value is less than or equal to 0, display error message and ask user to reenter a valid input.
 # 3. Return value. 
 def CheckDimValue(value, what):
-    while value < 0:
+    while value <= 0:
         print("The", what, "must be greater than zero!")
         value = float(input("Please re-enter the " + what + " of hunk of cheese. "))
     return value
 
-# Check if the inputted value is greater than zero. If not, then display error message and tell user to enter a valid value. 
+# 1. Receive the nbubbles value.
+# 2. If the value is less than or equal to 0, display error message and ask user to reenter a valid input.
+# 3. Return nbubbles. 
 def BubbleCheck(nbubbles, thing):
-    while nbubbles < 0:
+    while nbubbles <= 0:
         print("The", thing, "must be greater than zero!")
         nbubbles = float(input("Please re-enter the number of " + thing + ". "))
     return nbubbles
 main()
+
