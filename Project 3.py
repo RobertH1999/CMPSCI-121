@@ -1,6 +1,6 @@
 """
 Purpose: Estimate the volume of the rectangular chunk of Swiss cheese. Assume the holes
-are sphereical or cylinders. 
+are spherical or cylinders. 
 Input needed: The dimensions of the cheese, the radius of the holes,
               radius and height of cylinder.  
               the number of number of holes.  
@@ -112,14 +112,14 @@ def volumeCheese(hRectangle,wRectangle,lRectangle, numSphere, radSphere, numcyli
     cheesevolume = rVolume - cVolume - sVolume
     return cheesevolume
 
-# Check if the inputted value is greater than zero. If not, then display error message and tell them to enter a valid value. 
+# Check if the inputted value is greater than zero. If not, then display error message and tell user to enter a valid value. 
 def CheckValue(value, what):
     while value < 0:
         print("The ", what, " must be greater than zero!")
         value = float(input("Enter a value greater than or equal to zero. " + what))
     return value
 
-# Check number of spheres and cylinders and make sure input is valid. 
+# Check if the inputted value is greater than zero. If not, then display error message and tell user to enter a valid value. 
 def BubbleCheck(nbubbles, thing):
     while nbubbles < 0:
         print("The ", thing, " must be greater than zero!")
