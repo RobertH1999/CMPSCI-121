@@ -33,12 +33,13 @@ In volumeSphere function which is to calculate the total volume of sphere in the
     3. Return sphereVolume.
 
 In volumeCylinder function which is to calculate the total volume of cylinder in the Swiss cheese:
-    1. Receive the parameters nCylinder and rCylinder, and hCylinder.
+    1. Receive the parameters nCylinder and rCylinder, and hCylinder,
+       where nCylinder is the number of cylinders, rCylinder is the radius of a cylinder, and hCylinder is the height of a cylinder.
     2. Use the equation cylinderVolume = nCylinder * pi * hCylinder * rCylinder**2.
     3. Return cylinderVolume.
 
 In volumeRectangle function which is to calculate the total volume of rectangle in the Swiss cheese:
-    1. Receive the parameters h(height of rectangle) , w(width of rectangle), l(length of rectangle)
+    1. Receive the parameters h , w, l, where h is the height of the rectangle, w is the width of the rectangle, and l is the length of the rectangle. 
     2. Use the equation rectangleVolume = h * w * l
     3. Return the value back to rectangleVolume.
     
@@ -114,7 +115,8 @@ def volumeSphere(nsphere, rsphere):
     sphereVolume = nsphere * 4/3 * pi * rsphere**3
     return sphereVolume
 
-# 1. Receive the parameters nCylinder and rCylinder, and hCylinder.
+# 1. Receive the parameters nCylinder and rCylinder, and hCylinder,
+#    where nCylinder is the number of cylinders, rCylinder is the radius of a cylinder, and hCylinder is the height of a cylinder.
 # 2. Use the equation cylinderVolume = nCylinder * pi * hCylinder * rCylinder**2.
 # 3. Return cylinderVolume.
 
@@ -122,7 +124,7 @@ def volumeCylinder(nCylinder, rCylinder, hCylinder):
     cylinderVolume = nCylinder * pi * rCylinder ** 2 * hCylinder
     return cylinderVolume
 
-# 1. Receive the parameters h, w, l
+# 1. Receive the parameters h , w, l, where h is the height of the rectangle, w is the width of the rectangle, and l is the length of the rectangle. 
 # 2. Use the equation rectangleVolume = h * w * l
 # 3. Return the value back to rectangleVolume.
 
