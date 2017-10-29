@@ -1,12 +1,17 @@
 """
-Purpose: Estimate the volume of the rectangular chunk of Swiss cheese. Assume the holes
-are spherical or cylinders. 
-Input needed: The dimensions of the cheese, the radius of the holes,
-              radius and height of cylinder.  
-              the number of number of holes.  
+Robert Hsu
+CMPSCI 121 - Fall 2017
+
+Purpose: Estimate the volume of the Swiss cheese. The shape of the Swiss cheese is a rectangular hunk with spherical and cylindrical holes. 
+To estimate the volume of Swiss cheese, we need to calculate the rectangular volume and subtract the holes from the rectangular volume. 
+Input needed: 1. Height, length, and width of rectangle
+              2. Number of spheres and cylinders
+              3. Radius of cylinder and radius
+              4. Height of Cylinder
 Expected output: Volume of the cheese.
 Algorithm:
-Volume of cheese: length * width * height.
+Volume of cheese: Volume of rectangle - volume of spheres - volume of cylinder
+Volume of rectangle: length * width * height. 
 Volume of spheres: 4/3 * pi * r^2.
 Volume of cylinder: pi * r^2*h.
 
@@ -45,6 +50,12 @@ In BubbleCheck function:
     3. Return to nbubbles.
 
 Execute the main function.
+
+Test Data:
+    Height = 25.8
+    Length = 40.67
+    Width = 35.5
+    
 """
 # pi is a global constant. 
 pi = 3.14159
@@ -52,23 +63,23 @@ pi = 3.14159
 # In main function, prompt user to input, height, length, width, numspheres, radiusSphere, numCylinder, heightCylinder.
 # Calculate the cheese volume. 
 def main():
-    height = float(input("Enter a value for the height of the cheese. "))
-    height = CheckValue(height, "height of cheese")
+    height = float(input("Enter the height of the hunk of cheese in centimeters. "))
+    height = CheckValue(height, "height of hunk of cheese")
     
-    length = float(input("Enter a value for the length of the cheese. "))
-    length = CheckValue(length, "length of cheese")
+    length = float(input("Enter the length of the hunk of cheese in centimeters. "))
+    length = CheckValue(length, "length of hunk of cheese")
     
-    width = float(input("Enter a value for the width of the cheese. "))
-    width = CheckValue(width, "width of cheese")
+    width = float(input("Enter the width of the hunk of cheese in centimeters. "))
+    width = CheckValue(width, "width of hunk of cheese")
 
-    numsphere = float(input("How many spherical bubbles are present?"))
+    numsphere = float(input("How many spherical bubbles are present? "))
     numsphere = BubbleCheck(numsphere, "number of spheres")
     
     radiusSphere = float(input("What is the radius of the spherical bubbles in centimeters? "))
     radiusSphere = CheckValue(radiusSphere, "radius of sphere")
 
     numCylinder = float(input("How many cylinders are present?"))
-    numCylinder = BubbleCheck(numCylinder, "number of cylinders")
+    numCylinder = BubbleCheck(numCylinder, "number of cylindrical holes")
 
     radiusCylinder = float(input("What is the radius of the cylinders in centimeters? "))
     radiusCylinder = CheckValue(radiusCylinder, "radius of cylinder")
@@ -118,13 +129,13 @@ def volumeCheese(hRectangle,wRectangle,lRectangle, numSphere, radSphere, numcyli
 def CheckValue(value, what):
     while value < 0:
         print("The ", what, " must be greater than zero!")
-        value = float(input("Enter a value greater than or equal to zero. " + what))
+        value = float(input("Please re-enter the " + what + " of hunk of cheese. "))
     return value
 
 # Check if the inputted value is greater than zero. If not, then display error message and tell user to enter a valid value. 
 def BubbleCheck(nbubbles, thing):
     while nbubbles < 0:
         print("The ", thing, " must be greater than zero!")
-        nbubbles = float(input("Enter a value greater than or equal to zero. " + thing))
+        nbubbles = float(input("Please re-enter the number of " + thing + ". "))
     return nbubbles
 main()
