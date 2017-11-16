@@ -1,53 +1,69 @@
 """
-Purpose: Write a program that simulates a Magic Ball.
-Input: File called 8_ball_responses will be read. User will be asked if they want to continue
-       with the program. User will enter 'true' to continue with the program and to quit, input anything else. They will then input a question
-
-Output: The computer will randomly generate an answer to the question. User will be asked
-        if they want to continue.
+Purpose: Find the following things:
+         Average annual change in population
+         The year with the greatest increase
+         The year with the smallest increase in population
+Input: Read lines from text file
+Output: The average annual change in population during the period, greatest and lowest increase in population. 
 Algorithm:
-        1. import the random library
-        2. Create a list called magicBall
-        3. Open the text file
-        4. Read data into list
-        5. Ask if the user wants to continue
-        6. Prompt user to enter a question
-        7. Program will randomly display a response
-        8. Program will ask user if he/she wants to continue
-Test Data:
-        Enter 'true'  if you wish to continue: true
-        Please enter a question here: Do you live in PA?
-        I’m not sure.
-        Enter 'true'  if you wish to continue: no
-        
+        1. Initialize a total and count variable to 0.
+        2. Create two empty lists called pop and change.
+        1. Read file into the program
+        4. Read data into pop list
+        5. Each time a line is read, increase count by 1. 
+        6. Insert the number in to the list.
+        7. To find the change, subtract the current number by previous number.
+           Do this for each number in the list starting with second number.
+           Add each change to the change list
+        8. Sum all the values in the change list
+        9. To find the average, divide the total by the count - 1.
+        10. Find the minimum change and maximum change using the min and max function
+        11. Find the corresponding index for the minimum and maximum change and add 1951.
+        12. Print average change, year with smallest change, and year with greatest change
 """
+#Initialize a total and count variable to 0.
+total = 0
+count = 0
 
-#Import the random library
-import random
+#Create two empty lists called pop and change.
+pop = []
+change = []
 
-#Create a list called magicBall
-magicBall = []
+#Read file into the program
+infile = open(r"E:\CMPSC121\USPopulation.txt", "r")
 
-#Open the text file 
-infile = open(r"E:\CMPSC121\8_ball_responses.txt", "r")
-
-#Read data into list
+#Read data into pop list
+#Each time a line is read, increase count by 1. 
 for line in infile:
-        line = line.rstrip('\n')
-        magicBall.append(line)
-        
-#Ask if the user wants to continue        
-ans = input ("Enter 'true'  if you wish to continue: ")
-
-
-while ans == 'true':
-    #Prompt user to enter a question
-    question = input("Please enter a question here: ")
-    #Program will randomly display a response
-    print(magicBall[random.randint(0,len(magicBall)-1)])
-    #Program will ask user if he/she wants to continue
-    ans = input ("Enter 'true'  if you wish to continue: ")
-    if ans != 'true':
-        infile.close() 
+    population = float(line)
+    pop.append(population)
+    count += 1
     
+#To find the change, subtract the current number by previous number.
+#Do this for each number in the list starting with second number.
+#Add each change to the change list
+for i in range(count-1):
+    annualchange = pop[i+1] - pop[i]
+    change.append(annualchange)
+
+#Sum all the values in the change list
+total = sum(change)
+
+#To find the average, divide the total by the count - 1. 
+average = total / (count - 1)
+
+#Find the minimum change and maximum change using the min and max function
+maxPopulation = max(change)
+minPopulation = min(change)
+
+#Find the corresponding index and add 1951.
+for j in range(count - 1):
+    if change[j] == maxPopulation:
+        maxyear = j + 1951
+    if change[j] == minPopulation:
+        minyear = j + 1951
+#Print average change, year with smallest change, and year with greatest change
+print ("The average annual change in population during the time period is {:.1f}. ".format(average))
+print("The smallest annual change in population during the time period is in {0:3.0f}. ".format(minyear))
+print("The greatest annual change in population during the time period is in {0:3.0f}. ".format(maxyear))              
 
