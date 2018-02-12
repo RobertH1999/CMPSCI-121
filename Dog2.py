@@ -1,11 +1,12 @@
 class Dog:
-	number_of_legs=0
+	number_of_legs= 0
 	count = 0
 	def __init__(self, name, breed, size, age):
 		self.name = name
 		self.breed = breed
 		self.size = size
 		self.age = age
+		Dog.count +=1
 		
 	def howMany(self):
 		return Dog.count
