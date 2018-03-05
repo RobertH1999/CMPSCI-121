@@ -13,6 +13,15 @@ class Bank:
 		if (today.month, today.day) < (int(month),int(day)):
 			age-=1
 		return age
+	
+class Customer(Bank):
+	def __init__(self, name, birthdate, phone, balance = 0.0):
+		def Bank.__init__(self, name, birthdate, phone, balance = 0.0):
+			
+		
+class Manager(Bank):
+	def Bank.__init__(self, name, birthday, phone, balance = 0.0):
+
 		
 	
 		
