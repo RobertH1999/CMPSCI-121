@@ -1,4 +1,5 @@
-import datetime   
+import datetime
+   
 
 class SavingsAccount:
     def __init__(self, account_num, int_rate, bal):
@@ -45,6 +46,7 @@ class CD:
 
     def get_interest_rate(self):
         return self.__interest_rate
+
     def get_balance(self):
         return self.__balance
 
@@ -57,30 +59,30 @@ class CD:
     def get_interest(self, time, int_rate):
         if time == 3:
             int_rate = 0.015
-            self.__balance *= (1 + interest*time)
+            self.__balance *= (1 + int_rate*time)
         elif time == 6:
             int_rate = 0.0175
-            self.__balance *= (1 + interest*time)
+            self.__balance *= (1 + int_rate*time)
         elif time == 12:
             int_rate = 0.0225
-            self.__balance *= (1 + interest*time)
+            self.__balance *= (1 + int_rate*time)
         elif time == 18:
             int_rate == 0.025
-            self.__balance *= (1 + interest*time)
+            self.__balance *= (1 + int_rate*time)
         elif time == 24:
             int_rate == 0.03
-            self.__balance *= (1 + interest*time)
+            self.__balance *= (1 + int_rate*time)
         else:
             int_rate == 0.035
-            self.__balance *= (1 + interest*time)
+            self.__balance *= (1 + int_rate*time)
             
             
 class Customer:
     def __init__(self,name,birthdate,phone,balance=0.0):
-        self.name=name
-        self.birthdate=birthdate
-        self.phone=phone
-        self.balance=balance
+        self.name= name
+        self.birthdate= birthdate
+        self.phone= phone
+        self.balance= balance
 
     def age(self):
         today=datetime.date.today()
@@ -103,11 +105,4 @@ class Customer:
         return self.balance
 
     def check_balance(self):
-        return self.balance       
-
-
-		
-	
-		
-		
-	
+        return self.balance 
