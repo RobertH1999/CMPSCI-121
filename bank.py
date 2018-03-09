@@ -1,11 +1,11 @@
 import datetime
    
 
-class SavingsAccount:
-    def __init__(self, account_num, int_rate, bal):
+class SavingsAccount(Customer):
+    def __init__(self, name, account_num, int_rate, balance):
+        Customer.__init__(self, name, balance)
         self.__account_num = account_num
         self.__interest_rate = int_rate
-        self.__balance = bal
 
     def set_account_num(self, account_num):
         self.__account_num = account_num
@@ -25,11 +25,11 @@ class SavingsAccount:
     def get_balance(self):
         return self.__balance
 
-class CD:
-    def __init__ (self, account_num, int_rate, bal, mat_date):
+class CD(Customer):
+    def __init__ (self, name, account_num, int_rate, balance, mat_date):
+        Customer.__init__(self, name, balance)
         self.__account_num = account_num
         self.__interest_rate = int_rate
-        self.__balance = bal
         self.__maturity_date = mat_date
 
     def set_account_num(self, account_num):
@@ -75,14 +75,17 @@ class CD:
         else:
             int_rate == 0.035
             self.__balance *= (1 + int_rate*time)
+
+class Checking(Customer):
+    def __init__(self, name, account_num
             
             
 class Customer:
     def __init__(self,name,birthdate,phone,balance=0.0):
         self.name= name
-        self.birthdate= birthdate
-        self.phone= phone
-        self.balance= balance
+        self.birthdate = birthdate
+        self.phone = phone
+        self.balance = balance
 
     def age(self):
         today=datetime.date.today()
@@ -106,3 +109,6 @@ class Customer:
 
     def check_balance(self):
         return self.balance 
+
+    
+
