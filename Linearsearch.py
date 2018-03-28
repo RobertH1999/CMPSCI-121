@@ -7,6 +7,9 @@ def linearSearch(item, dataList):
 def binarySearch(item, dataList):				   
 	if len(dataList) == 0:
 		return False
+	else:
+		midpoint = len(dataList)//2
+		   
              
                    
 				   
