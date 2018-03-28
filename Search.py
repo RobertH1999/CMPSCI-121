@@ -21,7 +21,7 @@ def insertionSort(dataList):
 		current = dataList[index]
 		position = index
             
-        while position > 0 and dataList[position] > current:
+        while position > 0 and dataList[position - 1] > current:
 			dataList[position] = dataList[position - 1] 
 			position -= 1
 		dataList[position] = current
