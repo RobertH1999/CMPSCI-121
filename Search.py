@@ -16,6 +16,20 @@ def binarySearch(item, dataList):
 			return binarySearch(item, dataList[:midpoint])
 		else:
 			return binarySearch(item,dataList[midpoint + 1:])
-             
-                   
+def insertionSort(dataList):
+	for index in range(len(dataList)):
+		current = dataList[index]
+		position = index
+            
+        while position > 0 and dataList[position] > current:
+			dataList[position] = dataList[position - 1] 
+			position -= 1
+		dataList[position] = current
+	return dataList
+		
+				   
+				   
+				   
+				   
+				   
 				   
