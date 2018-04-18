@@ -24,21 +24,7 @@ class App(QWidget):
             button = QPushButton(name) 
             grid.addWidget(button, *position)  
         self.setWindowTitle(self.title) 
-set
-s
-the main layout of the window
-The instance of a 
-QGridLayout
- is created and set to be the layout for the 
-application window
-labels that will be used later for buttons 
-creates a list of positions in 
-the grid 
-buttons are created and added to the layout with 
-the addWidget() method. Remember, since each 
-position is a tuple, you must write an asterisk 
-before the identifier. 
-11 
+ 
         self.setGeometry(self.left, self.top, self.width, self.height)  
         self.show() 
 if __name__ == '__main__': 
