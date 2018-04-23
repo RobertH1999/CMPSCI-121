@@ -12,5 +12,11 @@ class Animal:
 		return random.randint(199, 999)
 	
 	def setID(self, idnum):
-		self.__id = id nm
+		self.__id = idnum
+		
+	def eat(self):
+		print(self.name + "is eating")
+		
+	def __str__(self): 
+		return "Subject {} is {} years old".format(self.__id, self.name)
 		
